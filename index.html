@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validator</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <section class="section-1">
+      <div class="form-container">
+        <h1 class="heading-1">Sign Up Today!</h1>
+        <form class="form">
+          <div class="line-container">
+            <label for="name">Full Name</label>
+            <input
+              name="name"
+              type="text"
+              id="name"
+              placeholder="Full Name"
+              required
+              minlength="3"
+            />
+          </div>
+
+          <div class="line-container">
+            <label for="phone-number">Phone Number</label>
+            <input
+              name="phone"
+              type="tel"
+              id="phone-number"
+              placeholder="8-900-102-11-11"
+              required
+              minlength="11"
+            />
+          </div>
+
+          <div class="line-container">
+            <label for="email-address">Email Address</label>
+            <input
+              name="email"
+              type="email"
+              id="email-address"
+              placeholder="email@address.com"
+              required
+            />
+          </div>
+
+          <div class="line-container">
+            <label for="website-URL">Website URL</label>
+            <input
+              name="website"
+              type="url"
+              id="website-URL"
+              placeholder="https://sitename.com"
+              required
+            />
+          </div>
+
+          <div class="line-container">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create Password (Min. 8 Characters)"
+              required
+              pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+              title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number"
+            />
+          </div>
+
+          <div class="line-container">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              name="password"
+              type="password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              required
+              pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            />
+          </div>
+
+          <button type="submit" class="btn">Register</button>
+        </form>
+        <div class="message-container">
+          <h2 class="heading-2 message">Don't Hesitate!</h2>
+        </div>
+      </div>
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
+</html>
